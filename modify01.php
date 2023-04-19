@@ -99,11 +99,12 @@
                     ?>
                     >     
                     <label for="com_flg">완료</label>
-
+                </div>
+                <div class="btn_group">
                     <button type = submit name="submit" >SAVE</button>
                     <a class="link_btn" href="delete01.php?list_no=<?php echo $result_info['list_no']?>">DELETE</a>
                     <a class="link_btn" href="list.php" >CANCEL</a>
-            </div>
+                </div>
         </form>
     </div>
 </body>

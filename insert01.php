@@ -59,8 +59,10 @@
                     <input class="time" type="text" name="ex_min" maxlength="2" id="ex_min" >
                     <label  for="ex_min">분</label>
             </div>
-            <button class="save_btn" type="submit">SAVE</button>
-            <a class="link_btn" href="list.php">CANCEL</a>
+            <div class="btn_group">
+                <button type="submit">SAVE</button>
+                <a class="link_btn" href="list.php">CANCEL</a>
+            </div>
         </form>
     </div>
 </body>

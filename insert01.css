@@ -23,6 +23,12 @@ body{
     background-color: #fff;
     border-radius: 25px 25px 0 0;
 }
+form
+{
+    width:100%;
+
+    position : relative;
+}
 
 /* 제목,내용 */
 .form_box1
@@ -83,12 +89,26 @@ body{
 
 
 /* button a */
-button 
+
+
+.btn_group
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom:200px;
+    padding :15px;
+}
+
+
+button, .link_btn
 {
     width : 120px;
     height : 50px;
-    position : absolute;
-    bottom : 40px;
+
+    /* position : absolute; */
+    /* bottom : 40px; */
     color : #f8f8f8;
     background: #b10000;
     border-radius: 5px;
@@ -96,25 +116,13 @@ button
     border: 0;
     transition: all 0.2s ;
     cursor: pointer;
-    left : 50px;
+    /* left : 50px; */
 }
-.link_btn
+a
 {
-    display: inline-block;
-    width : 120px;
-    height : 50px;
-    padding : 15px 0;
-    text-align: center;
-    position : absolute;
     text-decoration: none;
-    color : #f8f8f8;
-    background: #b10000;
-    bottom : 40px;
-    border-radius: 5px;
-    font-size: 16px;
-    border: 0;
-    transition: all 0.2s ;
-    right : 50px;
+    text-align: center;
+
 }
 
 button:hover, a:hover
