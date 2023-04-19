@@ -1,12 +1,12 @@
 <?php
     define("DOC_ROOT",$_SERVER["DOCUMENT_ROOT"]."/");//root 설정
     define("URL_DB",DOC_ROOT."first_pj/src/common/db_common.php");// db연결
-    define("URL_FUNC",DOC_ROOT."first_pj/src/db_query/db_insert01.php"); // function 연결
+    define("URL_DB_INSERT",DOC_ROOT."first_pj/src/db_query/db_insert01.php"); // function 연결
     define("URL_HEADER",DOC_ROOT."first_pj/src/header.php"); //header 연결
     include_once(URL_DB);
-    include_once(URL_FUNC);
+    include_once(URL_DB_INSERT);
     
-    $result_list = select_obj_list();                       //obj_list에서 가장 최근자료 출력
+
     $http_method = $_SERVER["REQUEST_METHOD"];              // method 요청
 
     if ( $http_method === "POST" )                          // POST일때 
@@ -27,22 +27,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert</title>
+    <title>Awake</title>
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/insert.css">
+    <link rel="stylesheet" href="css/insert01.css">
 </head>
 <body>
-    <header>
-        <h1><img src="../src/img/logo.png" /></h1>
-        <p class="date">TODAY <?php echo date("Y-m-d") ?></p>
-        <div class="goal_text">
-            <form>
-            <?php echo $result_list["obj_contents"]?>
-            </form>
-        </div>
-    </header>
+    <?php include_once(URL_HEADER) ?>
     <div class="container">
-        <div class="line"></div>
         <form method="post" action="insert01.php">
             <div class="form_box1">
                 <label for="list_title">제목</label>
@@ -67,11 +58,10 @@
                     <label for="ex_hour">시간</label>
                     <input class="time" type="text" name="ex_min" maxlength="2" id="ex_min" >
                     <label  for="ex_min">분</label>
-                
-            <button class="save_btn btnBlueGreen btnFloat" type="submit">SAVE</button>
-            <button class="cancel_btn btnBlueGreen btnFloat"><a href="list.php">CANCEL</a></button>
+            </div>
+            <button class="save_btn" type="submit">SAVE</button>
+            <a class="link_btn" href="list.php">CANCEL</a>
         </form>
     </div>
 </body>
 </html>
-
