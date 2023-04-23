@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+/* 공통부분 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #2e2e2e;
+}
+#wrap {
+    background-color: #131313;
+    position: relative;
+    margin: 0 auto;
+    width: 390px;
+    height: 844px;
+}
+
+/* 헤더 */
+/* 헤더 - logo 영역 */
+header {
+    background: #131313;
+    /* width: 390px; */
+    height: 280px;
+}
+h1 {
+    display: inline-block;
+    width: 100%;
+    background: #131313;
+    text-align: center;
+    margin-top: 10px;
+    height: 116px;
+}
+h1 img {
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* 헤더 - TODAY */
+p.date {
+    color: #fff;
+    font-weight: 700;
+    text-indent: 5px;
+}
+p.date > a > i {
+    float: right;
+    margin-right: 10px;
+}
+p.date > a > i::after {
+    display: block;
+    clear: both;
+}
+
+/* 헤더 - 목표 */
+.goal_text {
+    width: 325px;
+    height: 45px;
+    border: 3px solid #FB2576;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 5px auto;
+}
+input.goal {
+    width: 319px;
+    line-height: 36px;
+    font-size: 16px;
+    border-radius: 10px;
+    height:100%;
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+    outline: none;
+    resize: none;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+/* 목표 설정 페이지 */
+.set_obj_box {
+    position: absolute;
+    top: 279px;
+    background: #131313;
+    height: 565px;
+    width: 100%;
+}
+form.mt150 {
+    margin-top: 150px;
+}
+
+/* 리스트 페이지 */
+/* 리스트 - 페이지네이션 */
+.paging {
+    width: 360px;
+    text-align: center;
+}
+.com-flg {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+.btn-prev span {
+    font-size: 16px;
+}
+.middle-page-num {
+    font-size: 22px;
+}
+.btn-next span {
+    font-size: 16px;
+}
+
+/* 리스트 - 취소선 표시 */
+.active {
+    text-decoration: line-through;
+}
+
+/* container 공통부분 */
+.container {
+    position: absolute;
+    border: 3px solid #FB2576;
+    /* padding: 30px; */
+    width: 390px;
+    z-index: 99;
+    top: 210px;
+    margin: 0 auto;
+    min-height: 634px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 25px 25px 0 0;
+}
+
+/* 수정,추가,삭제 컨테이너 */
+.container_m_i_d {
+    padding: 30px;
+}
+
+/* 리스트페이지 컨테이너 */
+.container_l {
+    padding: 10px 20px 10px 20px;
+}
+
+.container_l .inner {
+    height: 525px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container_l .inner .box {
+    width: 160px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.container_l .inner .box .box-title {
+    width: 160px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: 2px solid #FB2576;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container_l .inner .box .box-title a:hover {
+    text-decoration: underline;
+}
+
+.container_l .inner .box .box-content {
+    height: 90px;
+    padding-top: 5px;
+    padding-left: 30px;
+    text-align: left;
+    line-height: 25px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.container_l .inner .box .box-content ul {
+    list-style: circle;
+}
+
+/* 수정, 추가, 삭제 - 제목,내용 */
+.form_box1 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-row-gap: 20px;
+    align-items: center;
+}
+
+.form_box1 input {
+    height: 40px;
+    font-size: 16px;
+    border: 2px solid #FB2576;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 10px;
+}
+
+.form_box1 label {
+    margin-left: 5px;
+    position: relative;
+    font-weight: 600;
+}
+
+.form_box1 label:before {
+    content: "*";
+    color: #000;
+    position: absolute;
+    left: -10px;
+}
+
+/* 회색박스 공통 */
+.form_box2 {
+    width: 330px;
+    height: 305px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+
+.form_box2 input {
+    width: 60px;
+    height: 30px;
+    background-color: #f8f8f8;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #FB2576;
+    text-align: center;
+}
+
+/* 회색박스 추가페이지 */
+.form_box2_i {
+    margin-top: 30px;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/* 회색박스 수정페이지, 삭제페이지*/
+.form_box2_m_d {
+    margin-top: 40px;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+/* set 박스 , num박스 box2_tit 공통 */
+
+.set_box,
+.num_box {
+    grid-column: 3/6;
+}
+
+.box2_tit {
+    padding-left: 20px;
+}
+
+/* box2_tit 수정페이지, 삭제페이지  */
+.box2_tit_m_d {
+    width: 100px;
+}
+
+/* 수정페이지 체크박스 */
+.ch_box_m {
+    zoom: 0.7;
+    accent-color: #FB2576;
+    cursor: pointer;
+}
+
+/* 삭제페이지 */
+p.alert {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* 버튼 공통 */
+.btn_group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    background-color: #FB2576;
+    border-radius: 5px;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100px;
+    cursor: pointer;
+}
+.btn:hover {
+    margin-top: -2px;
+    margin-left: 0px;
+    transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
+}
+.btn_tl15 {
+    transform: translateY(15px);
+}
+.btn_tl70 {
+    transform: translateY(70px);
+}
+
+.btn_tl80 {
+    transform: translateY(80px);
+}
+
+.btn_tl300 {
+    transform: translateY(300px);
+}
